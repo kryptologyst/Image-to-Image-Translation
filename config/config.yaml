@@ -1,0 +1,32 @@
+# Default Configuration for Image-to-Image Translation
+
+model:
+  model_name: "runwayml/stable-diffusion-v1-5"
+  device: null  # Auto-detect (cuda/cpu)
+  torch_dtype: "float16"
+  safety_checker: false
+
+generation:
+  num_inference_steps: 50
+  guidance_scale: 7.5
+  strength: 0.8
+  width: 512
+  height: 512
+
+# Application settings
+data_dir: "data"
+output_dir: "outputs"
+log_level: "INFO"
+max_batch_size: 4
+
+# Web interface settings
+web_app:
+  port: 8501
+  host: "localhost"
+  debug: false
+
+# Performance settings
+performance:
+  enable_memory_efficient_attention: true
+  enable_cpu_offload: false
+  enable_sequential_cpu_offload: false
